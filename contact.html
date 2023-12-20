@@ -27,17 +27,38 @@
    </div>
    <div class="hero-img">
     <div class="nav-bar">
-      <a href="">Home</a>
+      <a href="index.html">Home</a>
       <a href="#scroll-animals" id="adopt-scroll">Adopt</a>
       <a href="">About</a>
       <a href="">Contact Us</a>
     </div>
-   <!--<img src="kitten-grass.jpg" alt="">>--> 
-   </div>
+</div>
   </div>
         <h2 class="contact-title">
             Contact Us
         </h2>
+
+        <form name="contact" method="POST" data-netlify="true">
+          <p>
+            <label>Your Name: <input type="text" name="name" /></label>
+          </p>
+          <p>
+            <label>Your Email: <input type="email" name="email" /></label>
+          </p>
+          <p>
+            <label>Your Role: <select name="role[]" multiple>
+              <option value="leader">Leader</option>
+              <option value="follower">Follower</option>
+            </select></label>
+          </p>
+          <p>
+            <label>Message: <textarea name="message"></textarea></label>
+          </p>
+          <p>
+            <button type="submit">Send</button>
+          </p>
+        </form>
+        
   <script type='module' src="main.js"></script>
 </body>
 

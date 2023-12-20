@@ -205,8 +205,8 @@ html,body{
 }
 
 .nav-bar{
-    display:flex;
-    justify-content:flex-start;
+    
+    display:none;
 }
 
 .nav-bar a{
@@ -256,5 +256,11 @@ html,body{
 
     .only-lg-screen{
         display:inline;
+    }
+
+    .nav-bar{
+        display:block;
+        display:flex;
+        justify-content:flex-start;
     }
 }
