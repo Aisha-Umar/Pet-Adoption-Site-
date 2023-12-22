@@ -80,7 +80,7 @@ document.getElementById('adopt-scroll').addEventListener('click', function (e) {
     let targetSection = document.getElementById('scroll-animals')
 
     // Calculate the target scroll position (slightly below the target section)
-    let targetPosition = targetSection.offsetTop 
+    let targetPosition = targetSection.offsetTop
 
     // Scroll to the target position with smooth behavior
     window.scrollTo({
@@ -88,3 +88,27 @@ document.getElementById('adopt-scroll').addEventListener('click', function (e) {
         behavior: 'smooth'
     })
 })
+
+document.querySelector('.menu-toggle').addEventListener('click', function () {
+    toggleMenu()
+  })
+  
+  document.querySelector('.close-menu').addEventListener('click', function () {
+    closeMenu()
+  })
+  
+  function toggleMenu() {
+    let slidingMenu = document.querySelector('.menu-links')
+  
+    if (slidingMenu.classList.contains('show')) {
+      slidingMenu.classList.remove('show')
+    } else {
+      slidingMenu.classList.add('show')
+    }
+  }
+  
+  function closeMenu() {
+    let slidingMenu = document.querySelector('.menu-links')
+    slidingMenu.classList.remove('show')
+  }
+  

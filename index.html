@@ -9,44 +9,40 @@
 
 <body>
   <div class="hero">
-   <!--
+    <!--
     <h1>Welcome</h1>
     <h2>Our friends need a home!!!</h2>
    -->
-   <div class="left-col">
-    <div class="log">
-      <div class="logo-name">Adme</div>
-    </div>
-    <div class="hero-title">
-      <span class="hero-title-left">Ad</span><span class="hero-title-right">opt</span>
-      <div class="hero-title-bottom">
-        <span>me</span>
-        <button type="button" class="hero-btn">See More</button>
+    <div class="left-col">
+      <div class="log">
+        <div class="logo-name">Adme</div>
+      </div>
+      <div class="hero-title">
+        <span class="hero-title-left">Ad</span><span class="hero-title-right">opt</span>
+        <div class="hero-title-bottom">
+          <span>me</span>
+          <button href="index.html" type="button" class="hero-btn">See More</button>
+        </div>
       </div>
     </div>
-   </div>
-   <div class="hero-img">
-    <div class="nav-bar">
-      <a href="">Home</a>
-      <a href="#scroll-animals" id="adopt-scroll">Adopt</a>
-      <a href="">About</a>
-      <a href="contact.html">Contact Us</a>
-    </div>
-    <ul>
-      <li class="special">
-        <a href="#menu" class="menuToggle"><span>Menu</span></a>
-        <div id="menu">
-          <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">Our Story</a></li>
-            <li><a href="gallery.html">Gallery</a</li>
-            <li><a href="contact.html">Contact Us</a></li>
-          </ul>
+    <div class="hero-img">
+      <div class="header">
+        <div class="nav-bar">
+          <a href="index.html">Home</a>
+          <a href="#scroll-animals" id="adopt-scroll">Adopt</a>
+          <a href="">About</a>
+          <a href="contact.html">Contact Us</a>
         </div>
-      </li>
-    </ul>
-   <!--<img src="kitten-grass.jpg" alt="">>--> 
-   </div>
+        <span class="menu">Menu<ion-icon name="menu-outline" class="menu-toggle"></ion-icon></span>
+      </div>
+      <div class="menu-links">
+        <ion-icon name="close-outline" class="close-menu"></ion-icon>
+        <a href="">Home</a>
+        <a href="">About</a>
+        <a href="">Gallery</a>
+        <a href="">Contact</a>
+      </div>
+    </div>
   </div>
   <div class="pet-links">
     <a href="" data-filter="all">All Animals</a>
@@ -63,16 +59,18 @@
       </div>
       <div class="pet-info">
         <h3 class="pet-name"></h3>
-          <div class="agenspecies">
-            <small><span class="age"></span> - <span class="species"></span></small>
-          </div>
-          <p class="info">
-          </p>
-          <a class="info-btn" href=""></a>
+        <div class="agenspecies">
+          <small><span class="age"></span> - <span class="species"></span></small>
+        </div>
+        <p class="info">
+        </p>
+        <a class="info-btn" href=""></a>
       </div>
     </div>
   </template>
   <script type='module' src="main.js"></script>
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>
 
 </html>
