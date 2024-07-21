@@ -10,24 +10,64 @@ html,body{
 }
 
 .hero {
-    height:400px; /* Set the height of your hero section */
-    width: 100vw; /* Make the hero section full width */
-    display: flex;
-    margin-bottom: 20px;
-    }
+    position:relative;
+    height:100vh; /* Set the height of your hero section */
+    width: 100vw; /*Make the hero section full width */
+    display: flex; 
+    margin-bottom: 20px; 
+ }
 
   .hero-img {
-    overflow: hidden; /* Hide overflowing content */
+    /* overflow: hidden; Hide overflowing content */
+    position:relative;
     background-image: url('kitten-grass.jpg');
     background-size: cover;
     background-position: center;
-    width:80%;
-    height:100%;
+    width:100%;
+    height:100%; 
+    z-index:1;
   }
 
-  .header{
+  .overlay{
+    position:absolute;
+    top: 0;
+    left: 0;
+    width:100%;
+    height:100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index:2;
+  }
+
+  .hero-title{
+    position:absolute;
+    top:50%;
+    left:20%;
+    transform:translate(-50%,-50%);
+    z-index: 3;
+    text-align: center;
+    color:rgb(195, 182, 163);
+    font-size: 30px;
+    letter-spacing: .1rem;
+    font-weight: light;
+  }
+
+  .logo{
     display:flex;
-    justify-content:flex-start;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 40px;
+    }
+
+    .hero-title img{
+        margin-left: 10px;
+    }
+
+  .header{
+    position: relative;
+    display:flex;
+    justify-content:flex-end;
     margin-top: 20px;
   }
 
@@ -72,29 +112,29 @@ html,body{
     margin-bottom: 2px;
   }
 
-  .menu-links.show {
+  /* .menu-links.show {
     right: 0;
-  }
+  } */
 
-  .left-col{
+  /* .left-col{
     background-color:#B55926;
     font-family:'red hat display';
     width:20%;
     height:100%;
     position: relative;
-  }
+  } */
 
-  .hero-title {
+  /* .hero-title {
     position: absolute;
     top: 50%;
     left: 96%;
-    width: 30%; /* Set the width for the left column */
+    width: 30%;  Set the width for the left column 
     transform: translate(-86px,-50%);
     color: white;
     letter-spacing: .2rem;
     font-size: 4rem;
     font-weight: bold;
-}
+} */
 
   .hero-title-right{
     color:#B55926;
@@ -255,15 +295,19 @@ html,body{
 }
 
 .nav-bar{
-    visibility: hidden;
-    width:70%;
+    position:absolute;
+    top: 20px;
+    right: 20px;
+    visibility: hidden; 
+    z-index: 3;
 }
 
 .nav-bar a{
     text-decoration: none;
     padding: 15px;
-    color:#B55926;
     font-size: 1rem;
+    letter-spacing:.3rem;
+    color:rgb(253, 241, 241);
 }
 
 .hero-btn{
@@ -346,24 +390,42 @@ html,body{
 
 form{
     display:flex;
-    flex-direction: column;
-    justify-content: center;
+    flex-direction:column;
+    justify-content: flex-start;
     align-items: center;
-    background-color:rgba(181, 89, 35, 0.3);
-    width:80%;
+    background-color:rgba(238, 234, 231, 0.3);
+    width:60%;
     margin:0 auto;
-    border-radius: 16px;
+    padding: 20px;
+    /* border-radius: 16px; */
     margin-bottom: 30px;
 }
 
-form p{
+ form input{
     padding: 15px;
+    height:40px;
 }
 
-form p textarea,select,input{
+.name-and-email{
+    margin-bottom:30px;
+}
+
+.msg{
+    width:500px;
+    height:auto;
+    margin-bottom: 30px;
+}
+
+.message{
+    width:100%;
+    height:100%;
+    margin-bottom: 30px;
+}
+
+form p textarea,select,input,.message{
     border-radius: 4px;
     border:none;
-    background-color:rgba(252, 251, 251, 0.5) ;
+    background-color:rgba(247, 208, 208, 0.5) ;
 }
 
 form label, label option{
@@ -371,13 +433,21 @@ form label, label option{
 }
 
 .contact-btn{
-    padding: 6px 15px;
+    padding: 10px 15px;
+    text-align: center;
     border:none;
     border-radius: 5px;
     width:100px;
     color:white;
     background-color: #B55926;
     letter-spacing: .1rem;
+}
+
+.contact-btn:hover{
+    color:#b65a29;
+    border:solid 1px #b65a29;
+    background-color: transparent;
+    transition: ease-in-out 0.3s;
 }
     
 @media screen and (min-width:1024px) {
