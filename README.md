@@ -1,5 +1,5 @@
 
-![Alt text](public/images/admeAdopt.gif)
+![Alt text](admeAdopt.gif)
 
 This project is a web application that helps users find pets available for adoption. It leverages the Pet API to display detailed information about various pets, including their breed, age, location, and more.
 Features
